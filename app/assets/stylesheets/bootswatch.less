@@ -43,7 +43,8 @@ body {
 }
 
 .page-header {
-	border-bottom: 2px solid @purple
+	border-bottom: 2px solid @purple;
+	padding-bottom: 4px;
 }
 
 // NAVBAR
@@ -54,14 +55,15 @@ body {
 	.navbar-inner {
 	  .border-radius(0);
 	  .box-shadow(none);
-	  border-bottom: 2px solid @purple
+	  border-bottom: 1px solid @purple
 	}
 
 	.brand {
 		padding: 12px 20px 8px;
+		color: @grayLighter;
 
 		&:hover {
-				border-bottom: 3px solid @purple
+				color: lighten(@purple, 25%);
 		}
 	}
 
@@ -75,7 +77,7 @@ body {
 		border-left: 1px solid #222;
 
 		&:hover {
-			border-bottom: 3px solid @purple
+			color: lighten(@purple, 15%);
 		}
 	}
 
@@ -504,4 +506,8 @@ footer.footer {
 
 textarea {
 	width: auto;
+}
+
+a {
+	color: @purple;
 }

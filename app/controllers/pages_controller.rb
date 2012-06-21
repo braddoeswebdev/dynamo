@@ -15,11 +15,7 @@ class PagesController < ApplicationController
 	# GET /pages/1.json
 	def show
 		@page = Page.find(params[:id])
-		begin
-      #@data = @page.parse_syntax.gsub("\n","<br/>")
-		rescue
-			@data = "<pre>" + $!.to_s + "\n" + $!.backtrace.join("\n") + "</pre>"
-		end
+		
 		respond_to do |format|
 			format.html # show.html.erb
 			format.json { render json: @page }
@@ -83,6 +79,19 @@ class PagesController < ApplicationController
 		respond_to do |format|
 			format.html { redirect_to pages_url }
 			format.json { head :no_content }
+		end
+	end
+
+	def find
+		@pages = Page.where('title LIKE ?', params[:name])
+
+		if @pages.count == 1
+			@page = @pages.first
+			render :show
+		elsif @pages.count == 0
+			redirect_to root_path, :notice => "Couldn't find that page."
+		else
+			render :index
 		end
 	end
 end
