@@ -16,9 +16,9 @@ class PagesController < ApplicationController
 	def show
 		@page = Page.find(params[:id])
 		begin
-			@data = ERB.new(@page.content).result(binding).html_safe
+      #@data = @page.parse_syntax.gsub("\n","<br/>")
 		rescue
-			@data = $!.to_s
+			@data = "<pre>" + $!.to_s + "\n" + $!.backtrace.join("\n") + "</pre>"
 		end
 		respond_to do |format|
 			format.html # show.html.erb

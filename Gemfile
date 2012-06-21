@@ -8,6 +8,7 @@ gem 'rails', '3.2.2'
 gem 'sqlite3'
 gem 'less-rails-bootstrap'
 gem 'bootstrap_form'
+gem 'RedCloth'
 
 # Gems used only for assets and not required
 # in production environments by default.
