@@ -1,6 +1,21 @@
-<h1>Editing page</h1>
+<h1>Editing <%= @page.title %></h1>
 
-<%= render 'form' %>
+<%= bootstrap_form_for(@page) do |f| %>
+  <% if @page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@page.errors.count, "error") %> prohibited this page from being saved:</h2>
 
-<%= link_to 'Show', @page %> |
-<%= link_to 'Back', pages_path %>
+      <ul>
+      <% @page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.text_area :content, size: "80x10", label: "Page Content" %>
+  <%= f.actions do %>
+	  <%= f.primary 'Submit' %>
+  <% end %>
+<% end %>
+

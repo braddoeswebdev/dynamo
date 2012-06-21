@@ -10,6 +10,6 @@ class Page < ActiveRecord::Base
   end
 
   def dynamize
-		RedCloth.new(self.parse_syntax).to_html.gsub("{", "<%").gsub("}","%>")
+	RedCloth.new(self.parse_syntax).to_html.gsub("{", "<%").gsub("}","%>")
   end
 end

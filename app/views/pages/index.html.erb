@@ -1,15 +1,11 @@
 <h1>Listing pages</h1>
 
 <table class="table table-striped table-bordered">
-<% @pages.in_groups_of(6) do |group| %>
+<% @pages.in_groups_of(5) do |group| %>
   <tr>
 	  <% group.each do |page| %>
-		<td><%= page ? link_to(page.title, page) : "" %></td>
+		<td width="20%"><%= page ? link_to(page.title, page) : "" %></td>
 	  <% end %>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Page', new_page_path %>
