@@ -1,0 +1,8 @@
+[1m[32m      remove[0m  tmp/ace-install
+[1m[32m      remove[0m  public/javascripts/ace
+[1m[32m      create[0m  tmp/ace-install/ace-0.1.6.tgz
+[1m[32m         run[0m  tar xzf ace-0.1.6.tgz from "./tmp/ace-install"
+[1m[32m     copying[0m  ace (0.1.6)
+[1m[32m      remove[0m  tmp/ace-install
+[1m[32m      create[0m  public/stylesheets/ace-rails.css
+[1m[32m      insert[0m  app/views/layouts/application.html.erb
