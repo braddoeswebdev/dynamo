@@ -1,12 +1,15 @@
 <%
-      @data = RedCloth.new(ERB.new(@page.parse_syntax, nil, "<>").result(binding)).to_html
+  @data = RedCloth.new(\
+    ERB.new(@page.parse_syntax, nil, "<>").result(binding))\
+    .to_html
 %>
-<p id="notice"><%= notice %></p>
+
+<%# @data = "<pre>" + @page.parse_syntax + "</pre>" %>
+
 
 <div class="page-header"><h1><%= @page.title %></div>
 
   <div class="well"><%= @data.html_safe %></div>
-
 
   <div class="form-actions">
     <%= link_to 'Edit Page', edit_page_path(@page), :class => 'btn btn-mini btn-inverse' %>

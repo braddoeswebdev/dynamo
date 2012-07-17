@@ -77,4 +77,12 @@ module ApplicationHelper
 	def i(c)
 		('<i class="icon-' + c + ' icon-white"></i>').html_safe
 	end
+
+  def link_to_page x, n=nil
+    link_to( (n ? n : x), find_pages_path(:name => x))
+  end
+
+  def btn x, url, c=nil
+    link_to x, url, :class => (c ? "btn btn-#{c}": 'btn' )
+  end
 end

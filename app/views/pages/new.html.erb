@@ -13,7 +13,7 @@
     </div>
   <% end %>
 
-  <%= f.text_field :title %>
+  <%= f.text_field :title, :value => params[:name] %>
   <%= f.text_area :content, size: "80x10", label: "Page Content" %>
   <%= f.actions do %>
 	  <%= f.primary 'Submit' %>

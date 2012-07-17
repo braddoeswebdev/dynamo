@@ -89,7 +89,7 @@ class PagesController < ApplicationController
 			@page = @pages.first
 			render :show
 		elsif @pages.count == 0
-			redirect_to root_path, :notice => "Couldn't find that page."
+			redirect_to new_page_path(:name => params[:name]), notice:  'Couldn\'t find that page.  Would you like to start it?'
 		else
 			render :index
 		end
