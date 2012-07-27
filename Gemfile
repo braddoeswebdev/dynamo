@@ -9,9 +9,9 @@ gem 'sqlite3'
 gem 'less-rails-bootstrap'
 gem 'bootstrap_form'
 gem 'RedCloth'
-gem 'ace-rails-ap'
 gem 'nokogiri'
 gem 'mechanize'
+gem 'rack-webconsole'
 
 
 # Gems used only for assets and not required

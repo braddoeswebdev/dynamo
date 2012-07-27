@@ -2,7 +2,6 @@ GEM
   remote: https://rubygems.org/
   specs:
     RedCloth (4.2.9)
-    ace-rails-ap (0.0.2)
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
       mail (~> 2.4.0)
@@ -87,6 +86,9 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    rack-webconsole (0.1.2)
+      json
+      rack
     rails (3.2.2)
       actionmailer (= 3.2.2)
       actionpack (= 3.2.2)
@@ -136,13 +138,13 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  ace-rails-ap
   bootstrap_form
   coffee-rails (~> 3.2.1)
   jquery-rails
   less-rails-bootstrap
   mechanize
   nokogiri
+  rack-webconsole
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)
   sqlite3
