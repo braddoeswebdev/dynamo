@@ -1,7 +1,7 @@
 Dynamo
 =========
 
-Quick wiki-esque ERB/Javascript playground
+Quick wiki-esque ERB sandbox
 
 How To
 ------
