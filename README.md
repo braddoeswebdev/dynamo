@@ -11,6 +11,16 @@ How To
 * rails server
 * Start using it!
 
+Syntax
+------
+* {code} - Runs the code
+* {=code} - Prints the results of the code
+* {%page} - Link to view or create the page
+* {%page:title} - Link to view or create the page that looks like the title
+* {!stuff} - Comments
+* {#page} - Includes the content of the page
+* {&stuff} - This stuff only shows up if the page was included
+* {-stuff} - This stuff only shows up if the page wasn't included
 
     Dynamo is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
